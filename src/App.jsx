@@ -20,7 +20,7 @@ export default function AssemblyEndgame() {
     const isGameOver = isGameLost || isGameWon
  
     const letterArray = letters.map(letter =>{
-        return <Word letter={letter} key={nanoid()} id={nanoid()} status={isGameOver} guesses={guess} />
+        return <Word letter={letter} key={nanoid()} id={nanoid()} status={isGameOver} lost={isGameLost} guesses={guess} />
     })
 
     function guessLetter(guessedLetter){
